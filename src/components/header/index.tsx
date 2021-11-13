@@ -25,6 +25,7 @@ export const DefaultHeader: React.FC = () => {
           </Button>
         </div>
         <Button color="#EB5289" textColor="white" className="swap">
+          <img src="/swap.svg" />
           Swap tokens
         </Button>
       </div>

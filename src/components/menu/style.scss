@@ -26,14 +26,28 @@ menu{
                 top: 30px;
                 right: 0;
             }
+            img:first-child:hover{
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+            img:last-child{
+                display: none;
+            }
+            &.active img:last-child{
+                display: block;
+            }
+            svg:hover{
+                opacity: 0.6;
+                transform: scale(1.5);
+            }
         }
         li.li-hr::after{
             content: " ";
             border: 2px solid #0D131C;
             width: 60%;
             margin: auto;
-            margin-top: 45px;
-            margin-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
             text-align: center;
         }
     }

@@ -1,33 +1,55 @@
 import styled from "styled-components";
 import "./style.scss";
 import { Button, Icon, DropMenuIcon } from "src/widgets";
-import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
 const Container = styled.menu``;
 export const DefaultMenu: React.FC = () => {
-  const location = useSelector((state: any) => state.router.location.pathname);
+  const history = useHistory();
+  const gotoPage = (url) => {
+    history.push(url);
+  };
+  const [toggle, setToggle] = useState<any>({
+    home: window.location.pathname === "/" ? true : false,
+    page1: window.location.pathname === "/page1" ? true : false,
+    page2: window.location.pathname === "/page2" ? true : false,
+  });
   return (
     <Container>
       <div className="logo">
         <Icon name="logo" />
       </div>
-      <ul>
-        <li>
-          <a href="/">
-            <img src="m1.png" />
-          </a>
-          {location === "/" && <img src="mg.png" />}
+      <ul className="main-menu">
+        <li
+          onClick={(e) => {
+            setToggle({ ...toggle, home: true, page1: false, page2: false });
+            gotoPage("/");
+          }}
+          className={toggle.home ? "active" : ""}
+        >
+          <img src="m1.png" />
+          <img src="mg.png" />
         </li>
-        <li className="li-hr">
-          <a href="/page1">
-            <img src="m2.png" />
-          </a>
-          {location === "/page1" && <img src="mg.png" />}
+        <li
+          onClick={(e) => {
+            setToggle({ ...toggle, home: false, page1: true, page2: false });
+            gotoPage("/page1");
+          }}
+          className={toggle.page1 ? "active" : ""}
+        >
+          <img src="m2.png" />
+          <img src="mg.png" />
         </li>
-        <li>
-          <a href="/page2">
-            <img src="m3.png" />
-          </a>
-          {location === "/page2" && <img src="mg.png" />}
+        <li className="li-hr"></li>
+        <li
+          onClick={(e) => {
+            setToggle({ ...toggle, home: false, page1: false, page2: true });
+            gotoPage("/page2");
+          }}
+          className={toggle.page2 ? "active" : ""}
+        >
+          <img src="m3.png" />
+          <img src="mg.png" />
         </li>
       </ul>
 

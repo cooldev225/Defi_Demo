@@ -10,6 +10,7 @@ import m3Icon from "./m3";
 import t1Icon from "./t1";
 import t2Icon from "./t2";
 import t3Icon from "./t3";
+import swapIcon from "./swap";
 export const IconList = {
   eth: ETHIcon,
   "arrow-down": ArrowDownIcon,
@@ -23,4 +24,5 @@ export const IconList = {
   t1: t1Icon,
   t2: t2Icon,
   t3: t3Icon,
+  swap: swapIcon,
 };

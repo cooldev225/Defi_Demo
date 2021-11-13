@@ -28,6 +28,9 @@ header{
         &>.swap{
             margin: 5px 17px 0px 17px;
             float: right;
+            img{
+                margin-top: -6px;
+            }
         }
         &>.metamask{
             float: right;
