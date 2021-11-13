@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { HomePage } from "src/pages";
+import { HomePage, Page1, Page2 } from "src/pages";
 import { Switch, Route } from "react-router-dom";
 import { DefaultLayout } from "src/layout/index";
 export const renderRoutes = (routers: Routes = []): JSX.Element => {
@@ -40,6 +40,18 @@ const routes: Routes = [
     path: "/",
     exact: true,
     component: HomePage,
+  },
+  {
+    layout: DefaultLayout,
+    path: "/page1",
+    exact: true,
+    component: Page1,
+  },
+  {
+    layout: DefaultLayout,
+    path: "/page2",
+    exact: true,
+    component: Page2,
   },
 ];
 export default routes;

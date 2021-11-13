@@ -6,7 +6,7 @@ import "./App.scss";
 dom.watch();
 const App = () => {
   return (
-    <div id="world-ie">
+    <div id="defi">
       <Router>{renderRoutes(routes)}</Router>
     </div>
   );

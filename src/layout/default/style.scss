@@ -1,0 +1,30 @@
+.defi-default-layout{
+    position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #222C38;
+    min-height: 100vh;
+    overflow: hidden;
+    &>.ellipse150{
+      position: absolute;
+      width: 1311px;
+      height: 853px;
+      left: 487px;
+      top: 787px;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(29, 175, 238, 0.31) 0%, rgba(29, 175, 238, 0.02) 63.66%, rgba(29, 175, 238, 0) 100%);
+      opacity: 0.5;
+      z-index: -1;
+    }
+    &>.ellipse142{
+      position: absolute;
+      width: 1311px;
+      height: 853px;
+      left: -147px;
+      top: -333px;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(208, 61, 87, 0.3) 0%, rgba(208, 61, 87, 0.08) 63.66%, rgba(208, 61, 87, 0) 100%);
+      opacity: 0.5;
+      z-index: -1;
+    }
+  }

@@ -1,3 +1,173 @@
-.worldie-home-page {
-    
+.main-content {
+    margin-left: 120px;
+    padding: 38px 80px;
+    &>.body-header{
+        &>.small{
+            font-size: 12px;
+            line-height: 14px;
+            color: #FF5977;
+            display: block;
+            padding-left: 3px;
+            padding-bottom: 5px;
+        }
+        &>.title{
+            font-size: 36px;
+            line-height: 42px;
+            color: #FFFFFF;
+            display: block;
+        }
+    }
+    &>.content{
+        &>.items-grid{
+            .card{
+                border-radius: 8px;
+                margin-top:50px;
+                margin-bottom:62px;
+                height: 416px;
+                .card-header{
+                    padding: 18px 40px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .header-center{
+                        display: flex;
+                        align-items: center;
+                        .text{
+                            display: flex;
+                            font-size: 23px;
+                            line-height: 27px;
+                            text-align: right;
+                            color: #FFFFFF;
+                            align-items: center;
+                        }
+                        .text:nth-child(1)::after{
+                            content: "|";
+                            margin-top: -6px;
+                            padding: 0px 22px;
+                            color: #B7364F;
+                        }
+                    }
+                }
+                .card-body{
+                    .body-header{
+                        z-index: 999;
+                        margin:0px 37px;
+                        border-radius: 26px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        padding:13px 10px;
+                        position: relative;
+                        span{
+                            opacity: 1;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 23px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;                            
+                            color: #FFFFFF;
+                        }
+                    }
+                    .body-content{
+                        z-index: 0;
+                        position: relative;
+                        margin: -20px 16px 0px 16px;
+                        padding:45px 21px 10px 21px;
+                        border-radius: 8px;
+                        .text-row{
+                            display: flex;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 19px;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #FFFFFF;
+                            padding:13px 0px 12px 0px;
+                        }
+                        .text-row:nth-child(1){
+                            color: #FFFFFF;
+                            border-color: #FFFFFF;
+                        }
+                        .text-row:nth-child(2){
+                            color: #ffffffcc;
+                            border-color: #FFFFFFcc;
+                        }
+                        .text-row:nth-child(3){
+                            color: #ffffffaa;
+                            border-color: #ffffff99;
+                        }
+                        .text-row:nth-child(4){
+                            color: #ffffff55;
+                            border-color: #ffffff44;
+                        }
+                        .text-row .value{
+                            color: white;
+                        }
+                        .text-bar{
+                            display: flex;
+                            font-weight: 300;
+                            font-size: 14px;
+                            line-height: 16px;
+                            justify-content: space-between;
+                            padding:25px 0px 10px 0px;
+                            color: #ffffff66;
+                        }
+                        .progress-bar{
+                            flex: 1;
+                            border-radius: 26px;
+                            margin-left: 10px;
+                        }
+                        .progress-bar span{
+                            margin-left: 10px;
+                            font-size: 12px;
+                            line-height: 14px;
+                            text-align: center;
+                            color: white;
+                        }
+                        .progress-val{
+                            border-radius: 26px;
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+            .card.type-0{
+                background: linear-gradient(126.51deg, #F84686 2.33%, #C13660 100%);
+                .card-header .header-center .text:nth-child(1)::after{
+                    color: #B7364F;
+                }
+                .card-body .body-header{
+                    background:#bd345f;
+                }
+                .card-body .body-content{
+                    background: linear-gradient(126.51deg, #FF5977 2.33%, #B93684 100%);
+                }
+                .card-body .body-content .progress-bar{
+                    background: rgba(103, 22, 47, 0.4);
+                }
+                .card-body .body-content .progress-val{
+                    background:#3D4E63;
+                }
+            }           
+            .card.type-1{
+                background: linear-gradient(126.51deg, #303F51 2.33%, #2C3847 100%);
+                .card-header .header-center .text:nth-child(1)::after{
+                    color: #121B25;
+                }
+                .card-body .body-header{
+                    background: #1f2f42;
+                }
+                .card-body .body-content{
+                    background: #394a5e;
+                }
+                .card-body .body-content .progress-bar{
+                    background:#1f2f42;
+                }
+                .card-body .body-content .progress-val{
+                    background:#1DAFEE;
+                }
+            }            
+        }
+    }    
 }
