@@ -2,11 +2,30 @@ header{
     height: 105px;
     margin-left: 120px;
     position: relative;
+
+    @media (max-width: 992px) {
+        margin-left: 70px;
+    }
+    @media ( max-width: 767px) {
+        height: 20vw;
+        position: fixed;
+        width: 100%;
+        margin-left: unset;
+        background: #222c38;
+        z-index: 100000;
+        .main-content{
+            padding-top:40vw;
+        }
+    }
     &>.container{
         position: relative;
         display: inherit;
         padding: 48px 80px 5px 80px;
 
+        @media (max-width: 992px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
         @media (max-width: 767px) {
             padding: unset;
             height: 100%;
@@ -52,6 +71,12 @@ header{
                 font-size: 16px;
             }
 
+            @media (max-width: 992px) {
+                background: transparent;
+                > span{
+                    display:none;
+                }
+            }
             @media (max-width: 767px) {
                 position: absolute;
                 left: 32vw;
@@ -179,31 +204,5 @@ header{
 }
 
 
-@media (max-width: 992px) {
-    header{
-        margin-left: 70px;
 
-        .container{
-            padding-left: 30px;
-            padding-right: 30px;
-            .network {
-                background: transparent;
-                > span{
-                    display:none;
-                }
-            }
-        }
-    }
-}
 
-@media ( max-width: 767px) {
-    header {
-        height: 20vw;
-        position: relative;
-        margin-left: unset;
-
-        .container {
-            padding: unset;
-        }
-    }
-}

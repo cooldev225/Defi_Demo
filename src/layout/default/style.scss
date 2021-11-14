@@ -6,6 +6,15 @@
     background: #222C38;
     min-height: 100vh;
     overflow: hidden;
+
+    @media (max-width: 767px) {
+      margin-left: unset;
+      transform: unset;
+
+      .main-content{
+          padding-top:25vw;
+      }
+    }
     &>.ellipse150{
       position: absolute;
       width: 1311px;
@@ -15,6 +24,10 @@
       background: radial-gradient(50% 50% at 50% 50%, rgba(29, 175, 238, 0.31) 0%, rgba(29, 175, 238, 0.02) 63.66%, rgba(29, 175, 238, 0) 100%);
       opacity: 0.5;
       z-index: -1;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
     &>.ellipse142{
       position: absolute;
@@ -25,5 +38,9 @@
       background: radial-gradient(50% 50% at 50% 50%, rgba(208, 61, 87, 0.3) 0%, rgba(208, 61, 87, 0.08) 63.66%, rgba(208, 61, 87, 0) 100%);
       opacity: 0.5;
       z-index: -1;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
   }

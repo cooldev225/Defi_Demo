@@ -9,8 +9,6 @@ export const DefaultLayout: React.FC = (props) => {
       <DefaultFooter />
       <div className="ellipse150"></div>
       <div className="ellipse142"></div>
-
-      <div className="test-fixed">sadfsadfsdfsdfsdf</div>
     </div>
   );
 };
