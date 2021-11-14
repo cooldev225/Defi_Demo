@@ -4,7 +4,47 @@ footer{
     margin-left: 120px;
     padding-left: 80px;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 1.2;
     color: #FFFFFF;
     bottom: 0px;
+
+    .social-link {
+        display: none;
+    }
+
+    @media (max-width: 992px) {
+        margin-left: 70px;
+        
+    }
+
+    @media (max-width: 767px) {
+        margin-left: unset;
+        padding-left: unset;
+        font-size: 4vw;
+        height: unset;
+        padding-top: 2em;
+        padding-bottom: calc(2em + 15vw);
+        width: 100%;
+        
+        .container {
+            text-align: center;
+        }
+
+        .social-link {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 5vw;
+
+            li {
+                svg {
+                    height: 8vw;
+                    width: 8vw;
+                }
+
+                & + li {
+                    margin-left: 5vw;
+                }
+            }
+        }
+    }
 }

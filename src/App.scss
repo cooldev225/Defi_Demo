@@ -38,6 +38,10 @@ ul{
   max-width: 100%;
 }
 
+.sp {
+  display: none;
+}
+
 @media (min-width: 992px){
   .col-lg-6 {
       flex: 0 0 50%;
@@ -51,25 +55,19 @@ ul{
   }
 }
 
-
-
-
-
 ///
-@media (max-width: 768px){
+@media (max-width: 992px){
   html{
     font-size: 7px;
   }
   menu{
-    width: 70px;
-    ul li.active img:last-child{
-      display: none;
-    }
-    ul li.active img:first-child{
-      background-color: #252c38;
-    }
-    .logo{
-      margin: 54px 16px;
-    }
+    
+  }
+
+}
+
+@media (max-width: 767px) {
+  .sp {
+    display: block;
   }
 }

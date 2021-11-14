@@ -5,14 +5,14 @@ import { Button, Icon, DropMenuIcon } from "src/widgets";
 export const HomePage: React.FC = () => {
   return (
     <Fragment>
-      <div className="body-header">
-        <span className="small">MLP marketplace</span>
-        <span className="title">Live Mutual LIQUIDITY Pools</span>
-      </div>
       <div className="content">
-        <div className="row items-grid">
+        <div className="body-header">
+          <span className="small">MLP marketplace</span>
+          <span className="title">Live Mutual LIQUIDITY Pools</span>
+        </div>
+        <div className="items-grid">
           {Items.map((item, index) => (
-            <div className="col-12 col-lg-6 col-xl-4" key={index}>
+            <div className="card-wrapper" key={index}>
               <div className={"card type-" + item.type}>
                 <div className="card-header">
                   <div className="icon">

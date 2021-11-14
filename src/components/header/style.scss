@@ -6,6 +6,28 @@ header{
         position: relative;
         display: inherit;
         padding: 48px 80px 5px 80px;
+
+        @media (max-width: 767px) {
+            padding: unset;
+            height: 100%;
+        }
+
+        .logo {
+            display: none;
+
+            @media(max-width: 767px) {
+                display: block;
+                position: absolute;
+                left: 3vw;
+                top: 3vw;
+
+                svg {
+                    width: 14vw;
+                    height: 14vw;
+                }
+            }
+        }
+        
         &>.network{
             float: left;
             background: #19222D;
@@ -13,6 +35,7 @@ header{
             border-radius: 30px;
             display: flex;
             padding: 5px 6px;
+
             &>span{
                 font-style: normal;
                 font-weight: normal;
@@ -24,12 +47,76 @@ header{
                 margin-left: 19px;
                 margin-right: 16px;
             }
+
+            .menu-container .content {
+                font-size: 16px;
+            }
+
+            @media (max-width: 767px) {
+                position: absolute;
+                left: 32vw;
+                top: 50%;
+                transform: translateY(-50%);
+
+                .content {
+                    width: unset;
+                    height: 8vw;
+                    padding: 1vw;
+                    .icon {
+                        width: 6vw;
+                        height: 6vw;
+
+                        svg {
+                            height: 5vw;
+                            margin-left: auto;
+                            margin-right: auto;
+                            display: block;
+                            margin-top: unset;
+                            margin-top: 0.5vw;
+                        }
+                    }
+
+                    span {
+                        margin-left: 0.8em;
+                        margin-right: 0.5em;
+
+                        svg {
+                            height: 2vw;
+                            width: auto;
+                        }
+                    }
+                }
+
+                .menu-container .content {
+                    font-size: 3.2vw;
+                }
+            }
         }
         &>.swap{
             margin: 5px 17px 0px 17px;
             float: right;
+
             img{
                 margin-top: -6px;
+                @media (max-width: 767px) {
+                    height: 6vw;
+                    width: auto;
+                }
+            }
+
+            @media (max-width: 767px) {
+                position: absolute;
+                left: 52vw;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: unset;
+                height: 8vw;
+                width: 8vw;
+                border-radius: 50%;
+
+                span {
+                    display: none;
+                }
             }
         }
         &>.metamask{
@@ -39,11 +126,12 @@ header{
             border-radius: 30px;
             display: flex;
             padding: 0px 6px;
+
             &>span{
                 font-style: normal;
                 font-weight: normal;
                 font-size: 14px;
-                line-height: 16px;
+                line-height: 1.1;
                 display: flex;
                 align-items: center;
                 color: #FFFFFF;
@@ -52,6 +140,70 @@ header{
             &>button{
                 margin: auto;
             }
+
+            @media (max-width: 767px) {
+                position: absolute;
+                right: 5vw;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 10vw;
+                padding-left: 11vw;
+                padding-right: 1vw;
+
+                span {
+                    font-size: 3vw;
+                    padding-left: 10vw;
+
+                    display: none;
+
+                    // i {
+                    //     display: none;
+                    // }
+                }
+
+                button {
+                    font-size: 2.5vw;
+                }
+
+                svg {
+                    height: 5vw;
+                    width: 10vw;
+                    left: 1vw;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    header{
+        margin-left: 70px;
+
+        .container{
+            padding-left: 30px;
+            padding-right: 30px;
+            .network {
+                background: transparent;
+                > span{
+                    display:none;
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: 767px) {
+    header {
+        height: 20vw;
+        position: relative;
+        margin-left: unset;
+
+        .container {
+            padding: unset;
         }
     }
 }

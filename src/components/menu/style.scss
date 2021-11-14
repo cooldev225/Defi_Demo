@@ -8,19 +8,59 @@ menu{
     padding: 0px;
     margin-block-start: 0;
     margin-block-end: 0;
+
+    @media (max-width: 992px) {
+        width: 70px;
+        ul li.active img:last-child{
+            display: none;
+        }
+        ul li.active img:first-child{
+            background-color: #252c38;
+        }
+        .logo{
+            margin: 54px 16px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 15vw;
+        top: unset;
+        z-index: 9999999;
+    }
+
     .logo{
-        margin:54px 40px;
+        margin: 54px 40px;
+
+        @media (max-width: 992px) {
+            margin: 54px 15px;
+        }
+        
+        @media (max-width: 767px) {
+            margin: unset;
+            display: none;
+        }
     }
     ul{
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: 767px) {
+            flex-direction: row;
+        }
+
         li{
             width: 100%;
             text-align: center;
             cursor: pointer;
             padding: 20px 0;
             position: relative;
+            @media (max-width: 767px) {
+                padding: 0 3vw;
+            }
             img:nth-child(2) {
                 position: absolute;
                 top: 30px;
@@ -40,6 +80,19 @@ menu{
                 opacity: 0.6;
                 transform: scale(1.5);
             }
+
+            @media (max-width: 992px) {
+                &.active img:last-child{
+                    display: none;
+                }
+            }
+
+            @media (max-width: 767px) {
+                img:first-child {
+                    height: 14vw;
+                    border-radius: 0 0 2vw 2vw;
+                }
+            }
         }
         li.li-hr::after{
             content: " ";
@@ -49,11 +102,24 @@ menu{
             margin-top: 20px;
             margin-bottom: 20px;
             text-align: center;
+
+            @media (max-width: 767px) {
+                transform: rotate(90deg);
+                margin-top: unset;
+                margin-bottom: unset;
+                margin-left: 3vw;
+                margin-right: 3vw;
+                width: 8vw;
+            }
         }
     }
     ul.social-link {
         width: 100%;
         position: absolute;
         bottom: 63px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
     }
 }
